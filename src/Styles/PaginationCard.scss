@@ -1,0 +1,20 @@
+.paginationcard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border: 2px solid var(--Primary-color-hover);
+  border-radius: 8px;
+  color: var(--Primary-color);
+
+  cursor: pointer;
+
+  &:not(:first-child) {
+    margin: 0 0 0 1rem;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: var(--Primary-color-hover);
+  }
+}

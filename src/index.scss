@@ -1,0 +1,46 @@
+@import './Styles/_reset.scss';
+@import './Styles/_variable.scss';
+/* Here Goes the General  stuff */
+
+* {
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: var(--Base-font-size);
+  @media only screen and (min-width: 62.5em) {
+    font-size: var(--Base-font-size-bp-first);
+  }
+  @media only screen and (min-width: 70em) {
+    font-size: var(--Base-font-size-bp-second);
+  }
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.2;
+  letter-spacing: 0.2rem;
+  background-color: var(--Bg);
+}
+
+::placeholder {
+  padding: 0 0 0 5rem;
+  color: #ccccccda;
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+
+// Reusable class
+.d-n {
+  display: none;
+}
+
+.plus,
+.minus {
+  cursor: pointer;
+}

@@ -1,0 +1,25 @@
+.filterCard {
+  width: 100%;
+  color: #000;
+  background-color: #fff;
+
+  & button {
+    height: 5rem;
+    font-size: 2.5rem;
+
+    & + button {
+      height: 5rem;
+      width: 50%;
+      background-color: var(--Dashes);
+      margin: 1rem 0 2rem 0;
+      @media only screen and (min-width: 62.5em) {
+        display: none;
+      }
+
+      &:hover {
+        color: var(--Dashes);
+        background-color: rgb(133, 133, 133);
+      }
+    }
+  }
+}

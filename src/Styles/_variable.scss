@@ -1,0 +1,24 @@
+:root {
+  --Base-font-size: 50%; /* (8 / 16 )*100 --> 1rem = 8px*/
+  --Base-font-size-bp-first: 62.5%; /* (10 / 16 )*100 --> 1rem = 10px*/
+  --Base-font-size-bp-second: 68.75%; /* (12 / 16 )*100 --> 1rem = 12px*/
+  --Primary-color: #2fa7d6;
+  --Primary-color-hover: #2ebef7;
+  --Secondary-color: #f38422;
+  --Header-color: #182642;
+  --Footer-color: #023558;
+  --Footer-color-top: #287ab9;
+  --Bar-color: #ffffff;
+  --Text-color-primary: #2e2642;
+  --Text-color-secondary: #000;
+  --Bg: #f8f8f8;
+  --Form-height: 6rem;
+  --border-radius-form: 1rem;
+  --Menu-hoverActive-color: #f58522e3;
+  --Dashes: #cccccc;
+  --Box-shadow-color-1: #f0ad74d7;
+  --Box-shadow-color-2: #283e6ba8;
+}
+//Breakpoint
+// Small screen to large screen
+$Bp-first: 62.5em; // 1000 / 16;

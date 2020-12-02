@@ -1,0 +1,18 @@
+.feedback {
+  background-color: var(--Bar-color);
+  font-size: 2rem;
+  position: fixed;
+  width: 15rem;
+  height: 6rem;
+  top: 50vh;
+  right: -3.5rem;
+  transform: rotate(-90deg);
+  padding: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 8px solid var(--Primary-color);
+  border-radius: 5px;
+
+  cursor: pointer;
+}

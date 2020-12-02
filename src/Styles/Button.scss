@@ -1,0 +1,28 @@
+.button-form {
+  width: 100%;
+  height: 6rem;
+  margin: 0.8rem 0 0 0;
+
+  font-size: 3rem;
+  border-radius: var(--border-radius-form);
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--Primary-color-hover);
+  }
+}
+
+.buttonBg {
+  background-color: var(--Primary-color);
+  color: #fff;
+}
+
+.buttonOutline {
+  border: 2px solid var(--Primary-color);
+  background-color: transparent;
+  color: var(--Primary-color);
+
+  &:hover {
+    color: #fff;
+  }
+}

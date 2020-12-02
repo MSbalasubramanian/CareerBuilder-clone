@@ -1,0 +1,37 @@
+.nav {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 0.1fr 4fr;
+
+  @media only screen and (min-width: 62.5em) {
+    grid-template-columns: min-content 1fr;
+    grid-row: max-content;
+  }
+
+  & .ham {
+    grid-column: 1/2;
+    justify-self: start;
+    cursor: pointer;
+    @media only screen and (min-width: 62.5em) {
+      display: none;
+    }
+  }
+
+  & img {
+    grid-column: 2/3;
+    justify-self: center;
+    cursor: pointer;
+
+    @media only screen and (min-width: 62.5em) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+  }
+
+  & .sidebar {
+    @media only screen and (min-width: 62.5em) {
+      grid-column: 2/-1;
+      grid-row: 1/2;
+    }
+  }
+}

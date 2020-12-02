@@ -1,0 +1,63 @@
+.result {
+  background-color: var(--Bg);
+  padding: 2rem;
+
+  @media only screen and (min-width: 62.5em) {
+    grid-column: 2 /-1;
+    grid-row: 2/3;
+  }
+
+  & > div {
+    margin: 2rem;
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+    padding: 0 0 1rem 0;
+    border-bottom: 1px dashed var(--Dashes);
+
+    & a {
+      //Relevance and date
+      text-decoration: none;
+      color: var(--Primary-color);
+      font-style: bold;
+      font-size: 2rem;
+
+      @media only screen and (min-width: 62.5em) {
+        font-size: 2.3rem;
+      }
+      @media only screen and (min-width: 70em) {
+        font-size: 2.2rem;
+      }
+
+      &:not(:last-child) {
+        margin: 0 0 0 1.5rem;
+      }
+    }
+    & p:first-child {
+      //Sort By
+      margin: 0 1rem 0 0;
+      font-size: 2.25rem;
+      @media only screen and (min-width: 62.5em) {
+        font-size: 2.5rem;
+      }
+      @media only screen and (min-width: 70em) {
+        font-size: 2rem;
+      }
+    }
+
+    & a {
+      margin: 0 0 0 1.5rem;
+    }
+
+    & span {
+      color: var(--Dashes);
+      margin: 0 1rem;
+      @media only screen and (min-width: 62.5em) {
+        font-size: 2.5rem;
+      }
+    }
+
+    & a:last-child {
+    }
+  }
+}

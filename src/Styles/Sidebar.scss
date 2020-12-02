@@ -1,0 +1,146 @@
+.sidebar {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45vw;
+  height: 100vh;
+  z-index: 100;
+  @media only screen and (min-width: 62.5em) {
+    position: static;
+    height: auto;
+    align-self: center;
+  }
+
+  & div {
+    background-color: #f2f2f2;
+    padding: 3rem 1.2rem 3rem 1.2rem;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    @media only screen and (min-width: 62.5em) {
+      display: none;
+    }
+
+    & svg {
+      cursor: pointer;
+    }
+  }
+
+  & ul {
+    @media only screen and (min-width: 62.5em) {
+      display: grid;
+      grid-template-columns: repeat(4, max-content) 2rem 2rem max-content max-content;
+      grid-template-rows: 1fr;
+      grid-gap: 1rem;
+      justify-content: space-between;
+      align-content: center;
+      margin: -2.4rem 0 0 3rem;
+    }
+    @media only screen and (min-width: 75em) {
+      grid-template-columns: repeat(4, max-content) 15rem 15rem max-content max-content;
+      grid-template-rows: 1fr;
+    }
+
+    & .active {
+      border-color: var(--Menu-hoverActive-color);
+      & a {
+        color: var(--Menu-hoverActive-color);
+      }
+    }
+
+    & li {
+      padding: 2rem 0 1rem 1.2rem;
+      border-width: 0 0 2px 0;
+      border-style: none none solid none;
+      border-color: #f2f2f2ed;
+
+      & :last-child {
+        border: none;
+      }
+
+      & a {
+        color: #000;
+        font-size: 1.6rem;
+        text-decoration: none;
+
+        @media only screen and (min-width: 62.5em) {
+          font-size: 2rem;
+        }
+        @media only screen and (min-width: 70em) {
+          font-size: 1.95rem;
+        }
+        @media only screen and (min-width: 75em) {
+          font-size: 1.95rem;
+        }
+      }
+
+      &:hover:not(:last-child) {
+        border-color: var(--Menu-hoverActive-color);
+
+        & a {
+          color: var(--Menu-hoverActive-color);
+        }
+      }
+    }
+
+    & .list-1 {
+      @media only screen and (min-width: 62.5em) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+    }
+
+    & .list-2 {
+      @media only screen and (min-width: 62.5em) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+    }
+
+    & .list-3 {
+      @media only screen and (min-width: 62.5em) {
+        grid-column: 3/4;
+        grid-row: 1/2;
+      }
+    }
+
+    & .list-4 {
+      @media only screen and (min-width: 62.5em) {
+        grid-column: 4/5;
+        grid-row: 1/2;
+      }
+    }
+
+    & .list-5 {
+      @media only screen and (min-width: 62.5em) {
+        grid-column: 7/8;
+        grid-row: 1/2;
+        justify-self: end;
+      }
+    }
+
+    & .list-6 {
+      @media only screen and (min-width: 62.5em) {
+        grid-column: 8/9;
+        grid-row: 1/2;
+      }
+
+      & .sidemini {
+        @media only screen and (min-width: 62.5em) {
+          position: absolute;
+          top: 9rem;
+          right: -26rem;
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          width: 35vw;
+          padding: 1rem;
+          z-index: 300;
+        }
+      }
+    }
+  }
+}

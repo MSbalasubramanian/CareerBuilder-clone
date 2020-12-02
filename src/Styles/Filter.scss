@@ -1,0 +1,13 @@
+.filter {
+  background-color: var(--Bg);
+  padding: 2rem;
+
+  @media only screen and (min-width: 62.5em) {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+  }
+
+  & button:not(.buttonOutline) {
+    border: none;
+  }
+}

@@ -1,0 +1,171 @@
+.feedbackpopup {
+  transform: rotate(90deg);
+  --widthPopUp: 90vw;
+  --heightPopUp: 70vh;
+  background-color: var(--Bar-color);
+  width: var(--widthPopUp);
+  //   //? to make it center[ width + (2 * left)] = 100%
+  height: var(--heightPopUp);
+  position: absolute;
+  top: calc((100vh - var(--heightPopUp)) / 2);
+  //   //? (totalHeight - height ) / 2
+  left: 5vw;
+  //   //? above one is calculated by css, it is calculated by me
+  top: -550px;
+  left: -135px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: max-content max-content 1fr;
+
+  padding: 2rem;
+
+  box-shadow: 2px 4px 10px var(--Box-shadow-color-1),
+    3px 5px 10px var(--Box-shadow-color-2);
+
+  & > div {
+    grid-column: 1/-1;
+  }
+
+  & > div:first-child {
+    grid-row: 1/2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 2rem;
+
+    & img {
+      //
+    }
+
+    & form {
+      margin: 3rem 2rem 0 0;
+      align-self: flex-end;
+
+      & select {
+        width: 20rem;
+        height: 3rem;
+        border: none;
+        outline: 2px solid var(--Text-color-primary);
+      }
+
+      & + div {
+        margin: 1rem 0 0 0;
+        width: 100%;
+        border-bottom: 2px solid var(--Dashes);
+      }
+    }
+
+    & + div {
+      grid-row: 2/3;
+      padding: 2rem;
+      margin: 0 0 2rem 0;
+
+      & h4 {
+        font-size: 2.25rem;
+        color: var(--Text-color-primary);
+        padding: 2rem 0;
+      }
+
+      & ul {
+        & li {
+          cursor: pointer;
+          --height: 5rem;
+          margin: 2rem 0 0 0;
+          background-color: rgb(236, 236, 236);
+          height: 4rem;
+          padding: calc((var(--height) - 2.25rem) / 2) 0 0 0.8rem;
+          //* calc((totalHeight - font-size ) / 2)
+          border-radius: 5px;
+
+          &:active {
+            background-color: var(--Header-color);
+            & a {
+              color: #fff;
+            }
+          }
+
+          & a {
+            text-decoration: none;
+            color: var(--Text-color-primary);
+          }
+        }
+      }
+
+      & button {
+        background-color: var(--Header-color);
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        margin: 3rem 0 0 0;
+        display: float;
+        float: right;
+        cursor: pointer;
+      }
+
+      & + div {
+        grid-row: 3/4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & a {
+          text-decoration: none;
+          color: var(--Text-color-primary);
+
+          & span {
+            margin: 0 0 0 1rem;
+            align-self: baseline;
+          }
+        }
+
+        & + div {
+          background-color: #000;
+          position: absolute;
+          top: -20px;
+          right: -20px;
+          padding: 1rem 1rem;
+          border-radius: 50%;
+          border: 2px solid #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// clickable class
+
+.bgPopup {
+  background-color: var(--Header-color) !important;
+
+  & a {
+    color: #fff !important;
+  }
+}
+
+// .feedbackpopup {
+//   background-color: green;
+//   transform: rotate(90deg);
+//   position: absolute;
+
+//   --widthPopUp: 90vw;
+//   --heightPopUp: 70vh;
+
+//   width: var(--widthPopUp);
+
+//   height: var(--heightPopUp);
+
+//   // top: calc((100vh - var(--heightPopUp)) / 2);
+
+//   // left: 5vw;
+//   // top: -550px;
+//   // left: -135px;
+//   // transform: translateY(-200px);
+//   & h1 {
+//   }
+// }
+
+// // style="top: -367px !important; left: 442px !important;"

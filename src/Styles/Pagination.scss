@@ -1,0 +1,11 @@
+.pagination {
+  background-color: var(--Bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (min-width: 62.5em) {
+    grid-column: 2 /-1;
+    grid-row: 3/4;
+  }
+}

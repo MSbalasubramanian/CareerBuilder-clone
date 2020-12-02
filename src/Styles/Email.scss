@@ -1,0 +1,28 @@
+.email {
+  margin: 2rem;
+
+  @media only screen and (min-width: 62.5em) {
+    grid-column: 2 /-1;
+    grid-row: 1/2;
+  }
+
+  & div:first-child {
+    & button {
+      font-size: 2rem;
+      height: 3rem;
+      padding: 1.8rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media only screen and (min-width: 62.5em) {
+        width: 40vw;
+        font-size: 2.5rem;
+      }
+      @media only screen and (min-width: 70em) {
+        width: 40vw;
+        font-size: 2rem;
+      }
+    }
+  }
+}

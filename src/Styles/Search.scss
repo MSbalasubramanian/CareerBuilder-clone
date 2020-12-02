@@ -1,0 +1,120 @@
+.search {
+  background-color: var(--Header-color);
+  padding: 2.3rem 2.3rem 2.3rem 2.3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: max-content max-content;
+  justify-content: space-between;
+  align-content: center;
+
+  & h1 {
+    color: white;
+    font-weight: 200;
+    font-size: 3rem;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    @media only screen and (min-width: 70em) {
+      font-size: 2.3rem;
+    }
+  }
+
+  & .wrapper {
+    background-color: #fff;
+    padding: 0.9rem;
+    border-radius: var(--border-radius-form);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+    align-self: center;
+    @media only screen and (min-width: 62.5em) {
+      display: none;
+    }
+    & .search-mob {
+      width: 2rem;
+      height: 1.85rem;
+      fill: #2ebef7;
+    }
+  }
+
+  & form {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    margin: 4rem 0 0 0;
+    width: 100%;
+    @media only screen and (min-width: 62.5em) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 0.5fr;
+      grid-template-rows: max-content;
+      align-items: center;
+      grid-gap: 2rem;
+      margin: 1rem 0 0 0;
+    }
+    & fieldset {
+      padding: 1.3rem 0 1.3rem 0;
+      display: flex;
+      position: relative;
+
+      &:last-child {
+        padding: 0;
+      }
+
+      & input {
+        width: 100%;
+        height: var(--Form-height);
+        border-radius: 5px;
+        outline: none;
+
+        @media only screen and (min-width: 70em) {
+          --Form-height: 5rem;
+          height: var(--Form-height);
+        }
+
+        &[type='text'] {
+          font-size: 3rem;
+          @media only screen and (min-width: 70em) {
+            font-size: 2rem;
+          }
+        }
+
+        &:focus {
+          z-index: 10;
+        }
+      }
+
+      & .search-form {
+        position: absolute;
+        fill: #ccc;
+        top: calc((var(--Form-height) * 0.5));
+        left: 1.2rem;
+      }
+
+      & .nav-form {
+        position: absolute;
+        fill: #ccc;
+        top: calc(var(--Form-height) * 0.6);
+        left: 1.2rem;
+      }
+
+      & .circler-form {
+        position: absolute;
+        top: calc(var(--Form-height) * 0.4);
+        right: 2rem;
+        cursor: pointer;
+        z-index: 11;
+      }
+    }
+    & button {
+      @media only screen and (min-width: 62.5em) {
+        margin: -0.35rem 0 0 0;
+      }
+      @media only screen and (min-width: 70em) {
+        font-size: 2.5rem;
+        height: 5rem;
+      }
+    }
+  }
+}
